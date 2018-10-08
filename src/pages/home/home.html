@@ -1,14 +1,93 @@
+
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
+    <ion-title style="text-align:center">
+      Gallery
     </ion-title>
   </ion-navbar>
 </ion-header>
-
+ 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+    
+
+
+
+
+
+    <div padding>
+        <ion-segment [(ngModel)]="pet">
+          <ion-segment-button (click)="uploads('camera')" value="images">
+            <ion-icon name="image"></ion-icon>
+            image
+          </ion-segment-button>
+          <ion-segment-button (click)="uploads('video')" value="videos">
+            <ion-icon name="videocam"></ion-icon>
+            Video
+          </ion-segment-button>
+          <ion-segment-button (click)="uploads('audio')" value="audios">
+            <ion-icon name="mic"></ion-icon>
+            Audio
+          </ion-segment-button>
+        </ion-segment>
+      </div>
+      
+      <!-- <div [ngSwitch]="pet">
+        <ion-list *ngSwitchCase="'images'">
+          <ion-item>
+              <ion-card>
+                  <img src="{{imageEmp}}">
+                  <div class="card-title">Image 1</div>
+               
+             </ion-card>
+          </ion-item>
+          <ion-item>
+              <ion-card>
+                  <img src="{{imageEmp2}}">
+                  <div class="card-title">Image 2</div>
+            
+             </ion-card>
+          </ion-item>
+        </ion-list>
+      
+        <ion-list *ngSwitchCase="'videos'">
+          <ion-item>
+            <ion-thumbnail item-start>
+                <video  width="100" height="100" controls src="{{vidEmp}}" type="video/mp4"></video>
+            </ion-thumbnail>
+            <h2>Video 1</h2>
+          </ion-item>
+          <ion-item>
+            <ion-thumbnail item-start>
+                <video  width="100" height="100" controls src="{{vidEmp1}}" type="video/mp4"></video>
+            </ion-thumbnail>
+            <h2>Video 2</h2>
+          </ion-item>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'audios'">
+            <ion-item no-lines> 
+              <ion-thumbnail item-start>
+                  <audio  width="0" height="0" controls src="{{audEmp}}"  type="audio/mpeg"></audio>
+                  <br>
+                  <br>
+                  <h2>Audio 1</h2>
+              </ion-thumbnail>
+             
+            </ion-item>
+            
+            <ion-item no-lines> 
+              <ion-thumbnail item-start>
+                
+                  <audio  width="0" height="0" controls src="{{audEmp1}}"  type="audio/mpeg"></audio>
+                  <br>
+                  <br>
+                  <h2>Audio 2</h2>
+              </ion-thumbnail>
+            </ion-item>
+           
+          </ion-list>
+      </div>
+      <ion-segment-button (click)="getUploads()">
+     </ion-segment-button> -->
 </ion-content>
